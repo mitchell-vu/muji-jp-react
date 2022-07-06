@@ -130,6 +130,14 @@
   cursor: pointer;
 }
 
+@media screen and (min-width: 1600px) {
+  .header .header__nav {
+    max-width: 1840px;
+    padding-right: 100px;
+    padding-left: 100px;
+  }
+}
+
 @media screen and (min-width: 1024px) {
   .header .header__inner[data-fixmode='top'] {
     line-height: unset;

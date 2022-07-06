@@ -6,6 +6,12 @@ import { cartData } from '../data';
 import { Heading1, CartItemList, PriceSummary } from '../components';
 
 const ContentContainer = styled.main`
+  @media screen and (min-width: 1600px) {
+    max-width: 1840px;
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+
   box-sizing: border-box;
   display: block;
   max-width: 1384px;
@@ -49,7 +55,7 @@ export const CartPage = () => {
             <span>アイテム数</span>
             <TotalQuantity>2</TotalQuantity>
           </TotalQuantityWrapper>
-          <CartItemList items={cartData}/>
+          <CartItemList items={cartData} />
         </Col>
 
         <Col flex='500px'>
