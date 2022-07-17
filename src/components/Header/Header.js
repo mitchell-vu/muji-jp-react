@@ -3,7 +3,7 @@ import React from "react";
 import { PcHeader } from "./PcHeader";
 import { MobileHeader } from "./MobileHeader";
 
-import "./Header.css";
+import "./Header.scss";
 
 export const Header = () => {
   return (

@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import "antd/dist/antd.min.css";
 import { Route, Routes, useLocation } from "react-router-dom";
-import "./App.css";
+import "./App.scss";
 import { Layout } from "./components";
 
 import { CartPage, NotFoundPage, ProductDetailPage, SectionPage, StorePage } from "./pages";

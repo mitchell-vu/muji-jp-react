@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Col, Layout, List, Row } from "antd";
-import "./Footer.css";
+import { LogoMuji } from "../../assets/icons";
+import "./Footer.scss";
 
 const { Footer: AntFooter } = Layout;
 
@@ -130,32 +131,23 @@ const siteMapData = [
 export const Footer = () => {
   return (
     <AntFooter>
-      <Row className='footer-main'>
+      <Row className="footer-main">
         <Col span={8} xl={8} lg={24} md={24} sm={24} xs={24}>
-          <Link className='logo' to='/'>
-            <img src='https://img.muji.net/img/common/logo-muji.svg' alt='' />
+          <Link className="logo" to="/">
+            <LogoMuji />
           </Link>
-          <ul className='socialMedia'>
+          <ul className="socialMedia">
             {socialMediaLinkData.map((link, index) => (
               <li key={`social-${index}`}>
                 <a href={link.href}>
-                  <img src={link.icon} alt='' />
+                  <img src={link.icon} alt="" />
                 </a>
               </li>
             ))}
           </ul>
         </Col>
         {siteMapData.map((colData, index) => (
-          <Col
-            key={`sitemap-${index}`}
-            className='siteMapList'
-            span={4}
-            xl={4}
-            lg={6}
-            md={24}
-            sm={24}
-            xs={24}
-          >
+          <Col key={`sitemap-${index}`} className="siteMapList" span={4} xl={4} lg={6} md={24} sm={24} xs={24}>
             <List
               dataSource={colData}
               renderItem={(item) => (
@@ -170,36 +162,27 @@ export const Footer = () => {
         ))}
       </Row>
 
-      <Row justify='space-between' align='middle'>
+      <Row justify="space-between" align="middle">
         <Row>
-          <div className='navigation__wrapper'>
-            <a
-              className='navigation__link country'
-              href='https://www.muji.com/?area=footer'
-            >
+          <div className="navigation__wrapper">
+            <a className="navigation__link country" href="https://www.muji.com/?area=footer">
               <span>日本</span>
             </a>
-            <a
-              className='navigation__link'
-              href='https://www.muji.net/mt/contact/others/014425.html?area=footer'
-            >
+            <a className="navigation__link" href="https://www.muji.net/mt/contact/others/014425.html?area=footer">
               <span>個人情報の取り扱い</span>
             </a>
             <a
-              className='navigation__link'
-              href='https://www.muji.net/mt/contact/guide/netstore_info/014427.html?area=footer'
+              className="navigation__link"
+              href="https://www.muji.net/mt/contact/guide/netstore_info/014427.html?area=footer"
             >
               <span>特定商取引法</span>
             </a>
-            <a
-              className='navigation__link'
-              href='https://www.muji.net/sitemap/?area=footer'
-            >
+            <a className="navigation__link" href="https://www.muji.net/sitemap/?area=footer">
               <span>サイトマップ</span>
             </a>
           </div>
         </Row>
-        <Row className='copy-right'>
+        <Row className="copy-right">
           <p>
             <span>Copyright ©Ryohin Keikaku Co., Ltd.</span>
           </p>
