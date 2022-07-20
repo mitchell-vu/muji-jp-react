@@ -1,8 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import { useParams } from "react-router-dom";
-import { Breadcrumb } from "../components";
+import { Breadcrumb, SectionItems } from "../components";
 import { tshirtSection as data } from "../data";
+import {  } from "../components/Section/SectionItems";
 
 const ContentContainer = styled.div`
   box-sizing: border-box;
@@ -104,6 +105,8 @@ export const SectionPage = () => {
           </a>
         </ImageCol>
       </HeroRow>
+
+      <SectionItems />
     </ContentContainer>
   );
 };
